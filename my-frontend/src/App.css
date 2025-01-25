@@ -1,42 +1,239 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* src/App.css */
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Eliminado background-color para evitar sobrescribir en elementos hijos */
+}
+
+/* ESTILOS GENERALES */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Asegurar que el body ocupe toda la altura de la ventana */
+  padding: 0;
+  /* Eliminado width: 80%; para evitar problemas en dispositivos móviles */
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 600px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition:
+    padding 0.3s,
+    margin 0.3s;
+}
+
+/* RESPONSIVO: PANTALLAS MEDIANAS */
+@media (max-width: 768px) {
+  .container {
+    margin: 1.5rem 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .box h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* RESPONSIVO: PANTALLAS PEQUEÑAS */
+@media (max-width: 480px) {
+  .container {
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .box h2 {
+    font-size: 1rem;
+  }
+
+  .input-row,
+  .record-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-row button,
+  .record-buttons button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* RESPONSIVO: PANTALLAS MUY PEQUEÑAS */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .box h2 {
+    font-size: 0.95rem;
+  }
+}
+
+/* TÍTULO Y SUBTÍTULO */
+h1 {
   text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #444;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #666;
+  font-size: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* SECCIONES / CAJAS */
+.box {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.box h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #333;
 }
 
-.card {
-  padding: 2em;
+/* FILA PARA INPUT DE ARCHIVO Y BOTÓN */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background: #fafafa;
+  flex-wrap: wrap;
 }
 
-.read-the-docs {
-  color: #888;
+.file-input {
+  flex: 1;
+  background: #fafafa;
+}
+
+/* BOTONES DE GRABACIÓN */
+.record-buttons {
+  display: flex;
+  background: #fafafa;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* BOTONES GENERALES */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition:
+    background-color 0.3s,
+    opacity 0.3s;
+  outline: none;
+}
+
+/* BOTÓN PRINCIPAL */
+.primary-button {
+  background-color: #2b7a78;
+  color: #fff;
+}
+
+.primary-button:hover {
+  background-color: #236f6d;
+}
+
+/* BOTÓN SECUNDARIO */
+.secondary-button {
+  background-color: #def2f1;
+  color: #333;
+}
+
+.secondary-button:hover {
+  background-color: #cbe4e3;
+}
+
+/* MENSAJE DE ESTADO */
+.msg {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #444;
+}
+
+/* CAJA PARA RESULTADOS */
+.result-box {
+  background: #fafafa;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #2b7a78;
+}
+
+.result-box h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  color: #333;
+}
+
+/* PREFORMATEADO */
+.result-box pre {
+  background: #f0f0f0;
+  padding: 1rem;
+  white-space: pre-wrap;
+  border-radius: 4px;
+  font-family: Consolas, "Courier New", monospace;
+  margin-top: 0.5rem;
+  overflow-x: auto;
+}
+
+/* Mejoras adicionales para una mejor responsividad */
+
+/* Flexibilidad en las cajas para ajustarse mejor en diferentes tamaños */
+.box,
+.result-box {
+  width: 100%;
+}
+
+/* Asegurar que los elementos dentro de .input-row y .record-buttons se adapten correctamente */
+.input-row > *,
+.record-buttons > * {
+  flex: 1 1 auto;
+}
+
+/* Evitar desbordamiento horizontal */
+body {
+  overflow-x: hidden;
 }
