@@ -9,11 +9,10 @@ services:
       - "8000:8000"
     volumes:
       - ./backend/app:/app/app
-    environment:
-      - ENV_VAR=valor
-      - OLLAMA_URL=http://host.docker.internal:11434
     extra_hosts:
-      - "host.docker.internal:host-gateway"
+      - "host.docker.internal:host-gateway" # Mapeo de host interno
+    environment:
+      - OLLAMA_URL=http://host.docker.internal:11434 # Dirección para conectarse al host
     networks:
       - app-network
 
