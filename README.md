@@ -41,3 +41,21 @@ Este proyecto automatiza el flujo completo de procesar y analizar audios mediant
 - Personas que necesitan transcribir reuniones o notas de voz.
 - Usuarios que desean generar resúmenes claros y estructurados de contenido hablado.
 - Procesar grandes volúmenes de audios de manera eficiente y organizada.
+
+## Funcionalidades Planeadas
+
+El proyecto continuará evolucionando para incluir funcionalidades adicionales que amplíen su utilidad:
+
+1. **Transcripción de Videos de YouTube**:
+
+   - Permitir a los usuarios proporcionar un enlace a un video de YouTube.
+   - Extraer el audio del video y procesarlo para transcripción y generación de resúmenes.
+
+2. **Visualizador de Notas**:
+
+   - Crear una interfaz web donde los usuarios puedan navegar y buscar entre las notas generadas.
+   - Implementar opciones de organización y filtrado.
+
+3. **Clasificación Automática de Notas**:
+   - Utilizar IA para categorizar automáticamente las notas en base a categorías definidas por el usuario.
+   - Ejemplo de categorías: "Trabajo", "Ideas Personales", "Tareas Pendientes", etc.
