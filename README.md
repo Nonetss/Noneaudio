@@ -8,7 +8,9 @@ Este proyecto es una aplicación que permite a los usuarios procesar audios de f
 2. **Generación de Resúmenes**: Procesa la transcripción con **Ollama**, un modelo de lenguaje avanzado, para generar un resumen estructurado.
 3. **Almacenamiento**: Guarda los archivos de audio, transcripciones y resúmenes en el servidor de manera organizada.
 
-[Imagen frontend](./static/screenshot_26012025_155539.jpg)
+<p align="center">
+  <img src="./static/screenshot_26012025_155539.jpg" alt="Imagen frontend" />
+</p>
 
 ## Tecnologías Utilizadas
 
